@@ -1,6 +1,6 @@
 import type React from "react"
 import { Inter } from "next/font/google"
-import "@/app/styles/globals.css"; 
+import "@/styles/globals.css"; 
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsAppButton from "@/components/whatsapp-button"
