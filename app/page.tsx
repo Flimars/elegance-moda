@@ -26,7 +26,7 @@ export default function Home() {
           </div>
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=800&width=600"
+              src="placeholder.svg?height=800&width=600" 
               alt="Vitrine da loja Elegance Moda"
               fill
               className="object-cover"

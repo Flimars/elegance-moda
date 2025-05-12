@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -34,6 +35,19 @@ export default function Header() {
         isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-background"
       }`}
     >
+      <div className="show md:flex items-center justify-between bg-background/95 backdrop-blur-sm shadow-sm py-2 px-4">
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/imagens/logo/logo-2.png" 
+            alt="Logo da Elegance Moda" 
+            width={300} 
+            height={450} 
+            quality={100}
+            style={{ objectFit: 'cover', borderRadius: '12px' }}
+            priority 
+          />
+        </Link>
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
