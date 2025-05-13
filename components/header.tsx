@@ -1,4 +1,4 @@
-"use client"
+"use client" 
 
 import Image from "next/image"
 import Link from "next/link"
@@ -40,28 +40,30 @@ export default function Header() {
           <Image 
             src="/imagens/logo/logo-2.png" 
             alt="Logo da Elegance Moda" 
-            width={300} 
-            height={450} 
+            width={150} 
+            height={150} 
             quality={100}
-            style={{ objectFit: 'cover', borderRadius: '12px' }}
+            style={{ objectFit: 'cover', borderRadius: '12px', position: 'relative'}}
             priority 
           />
         </Link>
       </div>
+      {/* title */}
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold">
-              Elegance<span className="text-primary">Moda</span>
+              Elegance{" "}<span className="text-primary">Moda</span>
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          {/* Navigation Links */}
+          <nav className="show md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-sm tracking-wide text-gray-700 font-medium transition-colors hover:text-primary" //"text-sm font-medium transition-colors hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -123,7 +125,7 @@ export default function Header() {
             </Sheet>
           </div>
         </div>
-      </div>
+      </div> 
     </header>
   )
 }

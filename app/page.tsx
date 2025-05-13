@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import '../styles/globals.css';
+//import '../styles/globals.css';
 
 export default function Home() {
   return (
@@ -24,11 +24,12 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="relative h-[400px] rounded-lg overflow-hidden">
+          <div className="relative h-[400px] rounded-lg overflow-hidden" style={{ width: '500px', height: '600px', position: 'relative' }}>
             <Image
-              src="placeholder.svg?height=800&width=600" 
+              src="https://images.unsplash.com/photo-1660044057330-2b84debb65a3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHZpdHJpbmUlMjBkZSUyMHJvdXBhc3xlbnwwfHwwfHx8MA%3D%3D?height=800&width=600" 
               alt="Vitrine da loja Elegance Moda"
               fill
+              style={{ objectFit: 'cover' }}
               className="object-cover"
               priority
             />
