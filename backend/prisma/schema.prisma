@@ -1,0 +1,58 @@
+// Este arquivo define o schema do Prisma para o banco de dados PostgreSQL
+// Ele descreve os modelos de dados e seus relacionamentos
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Produto {
+  id          Int      @id @default(autoincrement())
+  nome        String
+  descricao   String
+  preco       Decimal  @db.Decimal(10, 2)
+  imagem      String
+  categoriaId Int
+  promocao    Boolean  @default(false)
+  precoPromo  Decimal? @db.Decimal(10, 2)
+  destaque    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  categoria   Categoria @relation(fields: [categoriaId], references: [id], onDelete: NoAction, onUpdate: Cascade)
+ 
+}
+
+model Categoria {
+  id       Int       @id @default(autoincrement())
+  nome     String    @unique
+  produtos Produto[]
+}
+
+model Contato {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  sobrenome  String
+  email      String
+  telefone   String
+  whatsapp   String
+  mensagem   String
+  createdAt  DateTime @default(now())
+}
+
+model Newsletter {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+// model Usuario {
+//   id        Int      @id @default(autoincrement())
+//   nome      String
+//   email     String   @unique
+//   senha     String
+//   createdAt DateTime @default(now())
+// }
