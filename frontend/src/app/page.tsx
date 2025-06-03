@@ -10,25 +10,25 @@ export default function Home() {
   // Dados do carrossel
   const carouselSlides = [
     {
-      image: '/images/carousel/slide1.jpg',
+      image: '/images/carousel/slide1.png',
       alt: 'Coleção Primavera/Verão',
       title: 'Temos o look perfeito para você!',
       subtitle: 'Nova coleção Primavera/Verão com peças exclusivas'
     },
     {
-      image: '/images/carousel/slide2.jpg',
+      image: '/images/carousel/slide2.png',
       alt: 'Promoções Especiais',
       title: 'Promoções Imperdíveis',
       subtitle: 'Até 50% de desconto em peças selecionadas'
     },
     {
-      image: '/images/carousel/slide3.jpg',
+      image: '/images/carousel/slide3.png',
       alt: 'Acessórios Elegantes',
       title: 'Acessórios que Transformam',
       subtitle: 'Complete seu look com nossa linha de acessórios'
     },
     {
-      image: '/images/carousel/slide4.jpg',
+      image: '/images/carousel/slide5.png',
       alt: 'Moda Plus Size',
       title: 'Beleza em Todos os Tamanhos',
       subtitle: 'Conheça nossa linha Plus Size com estilo e conforto'

@@ -15,7 +15,7 @@ const WhatsAppButton = ({ phoneNumber, message = 'Olá! Gostaria de mais informa
   // Cria a URL do WhatsApp com o número e a mensagem
   const whatsappUrl = `https://wa.me/${formattedPhone}?text=${encodeURIComponent(message)}`;
   
-  return (
+  return ( 
     <a 
       href={whatsappUrl}
       target="_blank"

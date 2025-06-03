@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footer';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,7 +23,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <WhatsAppButton phoneNumber="5511999999999" />
+        <WhatsAppButton phoneNumber="5553992552617" />
       </body>
     </html>
   );
