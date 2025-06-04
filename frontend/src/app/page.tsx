@@ -39,22 +39,22 @@ export default function Home() {
   const featuredCategories = [
     {
       name: 'Vestidos',
-      image: '/images/categories/vestidos.jpg',
+      image: '/images/teste.jpg',
       link: '/produtos?categoria=vestidos'
     },
     {
       name: 'Blusas',
-      image: '/images/categories/blusas.jpg',
+      image: '/images/categories/blusas/sueter-gabriela.webp',
       link: '/produtos?categoria=blusas'
     },
     {
       name: 'Saias',
-      image: '/images/categories/saias.jpg',
+      image: '/images/categories/saias/saia-daiane.webp',
       link: '/produtos?categoria=saias'
     },
     {
       name: 'Acessórios',
-      image: '/images/categories/acessorios.jpg',
+      image: '/images/categories/acessorios/bolsa-couro-preta.webp',
       link: '/produtos?categoria=acessorios'
     }
   ];
@@ -85,12 +85,12 @@ export default function Home() {
               Bem-vinda à <span className="text-rose-400 font-normal">Elegance Moda</span>
             </h1>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Descubra o melhor da moda feminina com peças que combinam elegância, conforto e estilo. 
-              Nossa missão é valorizar a beleza única de cada mulher, oferecendo roupas e acessórios 
+              Descubra o melhor da moda feminina com peças que combinam elegância, conforto e estilo.
+              Nossa missão é valorizar a beleza única de cada mulher, oferecendo roupas e acessórios
               que realçam sua personalidade e confiança.
             </p>
-            <Link 
-              href="/produtos" 
+            <Link
+              href="/produtos"
               className="inline-block bg-rose-400 hover:bg-rose-500 text-white px-8 py-3 rounded-md transition-colors"
             >
               Explorar Coleção
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Categorias em destaque */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.h2 
+          <motion.h2
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
@@ -110,34 +110,26 @@ export default function Home() {
           >
             Categorias em <span className="text-rose-400 font-normal">Destaque</span>
           </motion.h2>
-          
+
+          {/* Substitua o bloco <div className="grid..."> ... </div> por isto para teste: */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredCategories.map((category, index) => (
-              <motion.div
-                key={index}
-                initial="hidden"
-                animate="visible"
-                variants={fadeInUp}
-                custom={index * 0.2}
-                transition={{ delay: index * 0.2 }}
-              >
+              <div key={index}>
                 <Link href={category.link} className="block group">
-                  <div className="relative h-80 overflow-hidden rounded-lg shadow-md">
+                  <div className="relative h-80 bg-gray-200"> {/* Fundo cinza para ver o espaço */}
                     <Image
-                      src={category.image}
+                      src={category.image} // Use o caminho que você confirmou existir
                       alt={category.name}
                       fill
-                      style={{ objectFit: 'cover' }}
-                      className="group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectFit: 'cover' }} // Mudar para 'contain' para teste
+                    // Removido o className com hover e transition para simplificar
                     />
-                    <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
-                      <div className="w-full p-4 bg-white bg-opacity-80 group-hover:bg-opacity-90 transition-all">
-                        <h3 className="text-xl font-medium text-gray-800">{category.name}</h3>
-                      </div>
-                    </div>
+                  </div>
+                  <div className="w-full p-4 bg-white">
+                    <h3 className="text-xl font-medium text-gray-800">{category.name}</h3>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -147,7 +139,7 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
@@ -157,23 +149,23 @@ export default function Home() {
                 Novidades que <span className="text-rose-400 font-normal">Inspiram</span>
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Nossa nova coleção foi cuidadosamente desenhada para mulheres que valorizam 
-                qualidade e estilo. Com tecidos selecionados e acabamentos impecáveis, 
+                Nossa nova coleção foi cuidadosamente desenhada para mulheres que valorizam
+                qualidade e estilo. Com tecidos selecionados e acabamentos impecáveis,
                 cada peça é pensada para trazer conforto e elegância ao seu dia a dia.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Visite nossa loja física ou navegue pelo nosso catálogo online para 
+                Visite nossa loja física ou navegue pelo nosso catálogo online para
                 descobrir as últimas tendências e encontrar peças que combinam com seu estilo único.
               </p>
-              <Link 
-                href="/promocoes" 
+              <Link
+                href="/promocoes"
                 className="inline-block bg-rose-400 hover:bg-rose-500 text-white px-8 py-3 rounded-md transition-colors"
               >
                 Ver Promoções
               </Link>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
@@ -181,10 +173,10 @@ export default function Home() {
             >
               <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/novidades.jpg"
+                  src="/images/novidades.webp"
                   alt="Novidades da coleção"
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'none' }}
                 />
               </div>
             </motion.div>
@@ -195,7 +187,7 @@ export default function Home() {
       {/* Seção de depoimentos */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <motion.h2 
+          <motion.h2
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
@@ -203,7 +195,7 @@ export default function Home() {
           >
             O que nossas <span className="text-rose-400 font-normal">Clientes</span> dizem
           </motion.h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((item, index) => (
               <motion.div

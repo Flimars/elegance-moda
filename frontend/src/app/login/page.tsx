@@ -107,14 +107,14 @@ export default function Login() {
                   E-MAIL
                 </label>
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none placeholder: text-gray-600 text-gray-800 font-medium">
                     <FaEnvelope className="text-gray-400" />
                   </div>
                   <input
                     type="email"
                     id="email"
                     {...register('email')}
-                    className={`pl-10 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-1 ${
+                    className={`pl-10 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-1 placeholder:text-gray-600 text-gray-600 font-medium ${
                       errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-rose-300'
                     }`}
                     placeholder="seu.email@exemplo.com"
@@ -139,7 +139,7 @@ export default function Login() {
                     id="senha"
                     {...register('senha')}
                     className={`pl-10 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-1 ${
-                      errors.senha ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-rose-300'
+                      errors.senha ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-rose-300 placeholder:text-gray-600 text-gray-800 font-medium'
                     }`}
                     placeholder="Sua senha"
                   />

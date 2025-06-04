@@ -43,7 +43,7 @@ export default function Promocoes() {
             descricao: 'Vestido midi com estampa floral, mangas curtas e cintura marcada.',
             preco: 199.90,
             precoPromo: 159.90,
-            imagem: '/images/produtos/vestido-floral.jpg',
+            imagem: '/images/categories/vestidos/vestido-mindi-floral.webp',
             categoria: { id: 1, nome: 'Vestidos' }
           },
           {
@@ -52,7 +52,7 @@ export default function Promocoes() {
             descricao: 'Blusa de seda com decote V e mangas 3/4.',
             preco: 159.90,
             precoPromo: 129.90,
-            imagem: '/images/produtos/blusa-seda.jpg',
+            imagem: '/images/categories/blusas/blusa-lorena-verde.webp',
             categoria: { id: 2, nome: 'Blusas' }
           },
           {
@@ -61,16 +61,16 @@ export default function Promocoes() {
             descricao: 'Saia midi plissada em tecido leve com cintura alta.',
             preco: 149.90,
             precoPromo: 119.90,
-            imagem: '/images/produtos/saia-plissada.jpg',
+            imagem: '/images/categories/saias/saia-plissada-midi-rosa.webp',
             categoria: { id: 3, nome: 'Saias' }
           },
           {
             id: 4,
-            nome: 'Conjunto Blazer e Calça',
-            descricao: 'Conjunto elegante de blazer e calça em alfaiataria.',
+            nome: 'Sobretudo Neia',
+            descricao: 'Sobetudo elegante em alfaiataria.',
             preco: 299.90,
             precoPromo: 259.90,
-            imagem: '/images/produtos/conjunto-blazer.jpg',
+            imagem: '/images/categories/blazer-casacos/sobretudo-neia.webp',
             categoria: { id: 4, nome: 'Conjuntos' }
           },
           {
@@ -79,7 +79,7 @@ export default function Promocoes() {
             descricao: 'Vestido longo para ocasiões especiais com detalhes em renda.',
             preco: 349.90,
             precoPromo: 299.90,
-            imagem: '/images/produtos/vestido-festa.jpg',
+            imagem: '/images/categories/vestidos/vestido-longo-festa-cor-verde.webp',
             categoria: { id: 1, nome: 'Vestidos' }
           },
           {
@@ -88,7 +88,7 @@ export default function Promocoes() {
             descricao: 'Blusa cropped em malha canelada com alças finas.',
             preco: 99.90,
             precoPromo: 79.90,
-            imagem: '/images/produtos/blusa-cropped.jpg',
+            imagem: '/images/categories/blusas/blusa-cropped.jpg',
             categoria: { id: 2, nome: 'Blusas' }
           },
           {
@@ -97,16 +97,16 @@ export default function Promocoes() {
             descricao: 'Blazer estruturado em alfaiataria com botões dourados.',
             preco: 229.90,
             precoPromo: 189.90,
-            imagem: '/images/produtos/blazer.jpg',
+            imagem: '/images/categories/blazer-casacos/blazer-black.webp',
             categoria: { id: 5, nome: 'Blazer / Casaco' }
           },
           {
             id: 8,
-            nome: 'Bolsa Transversal',
-            descricao: 'Bolsa transversal em couro sintético com alça ajustável.',
+            nome: 'Bolsa Feminina em Couro',
+            descricao: 'Bolsa em couro croco estampado com alças fixas',
             preco: 129.90,
             precoPromo: 99.90,
-            imagem: '/images/produtos/bolsa.jpg',
+            imagem: '/images/categories/acessorios/bolsa-couro-preta.webp',
             categoria: { id: 6, nome: 'Acessórios' }
           }
         ];
@@ -225,7 +225,7 @@ export default function Promocoes() {
                         src={produto.imagem}
                         alt={produto.nome}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'contain' }}
                         className="hover:scale-105 transition-transform duration-500"
                       />
                     </div>

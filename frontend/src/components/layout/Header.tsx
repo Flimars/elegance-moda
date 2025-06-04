@@ -74,7 +74,7 @@ export default function Header() {
           <div className="flex-1 flex justify-center lg:justify-start">
             <Link href="/" className="block">
               <Image 
-                src="/images/logo.png" 
+                src="/images/logo/logo.png" 
                 alt="Elegance Moda" 
                 width={150} 
                 height={60} 
@@ -104,7 +104,7 @@ export default function Header() {
           </div>
           
           {/* Login e Carrinho */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 ml-6">
             <Link 
               href="/login" 
               className="hidden md:flex items-center text-gray-700 hover:text-rose-400"

@@ -209,7 +209,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Image 
-              src="/images/logo.png" 
+              src="/images/logo/logo.png" 
               alt="Elegance Moda" 
               width={120} 
               height={48} 
@@ -223,14 +223,14 @@ export default function Footer() {
       </div>
       
       {/* Cookie consent */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 flex flex-col md:flex-row justify-between items-center z-40">
+      {/* <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 flex flex-col md:flex-row justify-between items-center z-40">
         <p className="text-sm text-gray-600 mb-3 md:mb-0">
           Ao navegar por este site você aceita o uso de cookies para agilizar a sua experiência de compra.
         </p>
         <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-1 text-sm rounded transition-colors">
           ENTENDI
         </button>
-      </div>
+      </div> */}
     </footer>
   );
 }

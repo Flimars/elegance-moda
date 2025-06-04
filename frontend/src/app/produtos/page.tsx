@@ -44,7 +44,7 @@ export default function Produtos() {
             nome: 'Vestido Floral Midi',
             descricao: 'Vestido midi com estampa floral, mangas curtas e cintura marcada.',
             preco: 159.90,
-            imagem: '/images/produtos/vestido-floral.jpg',
+            imagem: '/images/categories/vestidos/vestido-mindi-floral.webp',
             categoria: { id: 1, nome: 'Vestidos' }
           },
           {
@@ -52,7 +52,7 @@ export default function Produtos() {
             nome: 'Blusa de Seda',
             descricao: 'Blusa de seda com decote V e mangas 3/4.',
             preco: 129.90,
-            imagem: '/images/produtos/blusa-seda.jpg',
+            imagem: '/images/categories/blusas/blusa-lorena-verde.webp',
             categoria: { id: 2, nome: 'Blusas' }
           },
           {
@@ -60,7 +60,7 @@ export default function Produtos() {
             nome: 'Saia Midi Plissada',
             descricao: 'Saia midi plissada em tecido leve com cintura alta.',
             preco: 119.90,
-            imagem: '/images/produtos/saia-plissada.jpg',
+            imagem: '/images/categories/saias/saia-plissada-midi.webp',
             categoria: { id: 3, nome: 'Saias' }
           },
           {
@@ -68,7 +68,7 @@ export default function Produtos() {
             nome: 'Conjunto Blazer e Calça',
             descricao: 'Conjunto elegante de blazer e calça em alfaiataria.',
             preco: 259.90,
-            imagem: '/images/produtos/conjunto-blazer.jpg',
+            imagem: '/images/categories/blazer-casacos/blazer-estruturado-2.webp',
             categoria: { id: 4, nome: 'Conjuntos' }
           },
           {
@@ -76,7 +76,7 @@ export default function Produtos() {
             nome: 'Vestido Longo Festa',
             descricao: 'Vestido longo para ocasiões especiais com detalhes em renda.',
             preco: 299.90,
-            imagem: '/images/produtos/vestido-festa.jpg',
+            imagem: '/images/categories/vestidos/vestido-longo-festa-cor-verde.webp',
             categoria: { id: 1, nome: 'Vestidos' }
           },
           {
@@ -84,7 +84,7 @@ export default function Produtos() {
             nome: 'Blusa Cropped',
             descricao: 'Blusa cropped em malha canelada com alças finas.',
             preco: 79.90,
-            imagem: '/images/produtos/blusa-cropped.jpg',
+            imagem: '/images/categories/blusas/blusa-cropped.jpg',
             categoria: { id: 2, nome: 'Blusas' }
           },
           {
@@ -92,7 +92,7 @@ export default function Produtos() {
             nome: 'Blazer Estruturado',
             descricao: 'Blazer estruturado em alfaiataria com botões dourados.',
             preco: 189.90,
-            imagem: '/images/produtos/blazer.jpg',
+            imagem: '/images/categories/blazer-casacos/blazer-estruturado.webp',
             categoria: { id: 5, nome: 'Blazer / Casaco' }
           },
           {
@@ -100,7 +100,7 @@ export default function Produtos() {
             nome: 'Bolsa Transversal',
             descricao: 'Bolsa transversal em couro sintético com alça ajustável.',
             preco: 99.90,
-            imagem: '/images/produtos/bolsa.jpg',
+            imagem: '/images/categories/acessorios/bolsas-tote-de-couro.webp',
             categoria: { id: 6, nome: 'Acessórios' }
           }
         ];
@@ -236,7 +236,8 @@ export default function Produtos() {
                 placeholder="Buscar produtos..."
                 value={termoBusca}
                 onChange={(e) => setTermoBusca(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-rose-300"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose-300 placeholder:text-gray-400 text-gray-600 font-medium"
+
               />
               <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>
@@ -274,7 +275,7 @@ export default function Produtos() {
                       src={produto.imagem}
                       alt={produto.nome}
                       fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'contain' }}
                       className="hover:scale-105 transition-transform duration-500"
                     />
                   </div>
