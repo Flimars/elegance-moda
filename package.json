@@ -1,5 +1,45 @@
 {
+  "name": "elegance-moda",
+  "version": "1.0.0",
+  "description": "Um MVP (Produto Mínimo Viável) é a versão mais básica e enxuta de um produto ou serviço. Testar a viabilidade da ideia, validar a proposta de valor, descobrir se há mercado para o produto e identificar pontos de melhoria.",
+  "keywords": [
+    "web"
+  ], 
+    "homepage": "https://github.com/Flimars/elegance-Moda#readme",
+  "bugs": {
+    "url": "https://github.com/Flimars/elegance-Moda/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flimars/elegance-Moda.git"
+  },
+  "license": "MIT",
+  "author": "Flavio de Medeiros Lima",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "framer-motion": "^12.12.1",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.4",
+    "react-icons": "^5.5.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "zod": "^3.25.17"
+  },
   "devDependencies": {
-    "@types/react-slick": "^0.23.13"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "8.50.0",
+    "eslint-config-next": "15.3.2",
+    "typescript": "^5.9.3"
   }
 }
